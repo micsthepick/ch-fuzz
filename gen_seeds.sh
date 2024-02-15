@@ -1,30 +1,30 @@
-mkdir -p /AFLplusplus/seeds-chsh
+mkdir -p ../outputs/seeds-chsh
 filename_increment=0
 
-echo "-s a" > /AFLplusplus/seeds-chsh/$filename_increment.dict;
+echo "-s a" > ../outputs/seeds-chsh/$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo "-s /bin/bash" > /AFLplusplus/seeds-chsh/$filename_increment.dict;
+echo "-s /bin/bash" > ../outputs/seeds-chsh/$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo '-s "/bin/bash" gues' > /AFLplusplus/seeds-chsh/$filename_increment.dict;
+echo '-s "/bin/bash" gues' > ../outputs/seeds-chsh/$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo "admn" > /AFLplusplus/seeds-chsh/$filename_increment.dict;
+echo "admn" > ../outputs/seeds-chsh/$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo "sshd" > /AFLplusplus/seeds-chsh/$filename_increment.dict;
+echo "sshd" > ../outputs/seeds-chsh/$filename_increment.dict;
 
-mkdir -p /AFLplusplus/seeds-chfn
+mkdir -p ../outputs/seeds-chfn
 filename_increment=0
 
-echo "-f a" > /AFLplusplus/seeds-chfn/$filename_increment.dict;
+echo "-f a" > ../outputs/seeds-chfn/$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo "-h 0123" > /AFLplusplus/seeds-chfn/$filename_increment.dict;
+echo "-h 0123" > ../outputs/seeds-chfn/$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo "-o root" > /AFLplusplus/seeds-chfn/$filename_increment.dict;
+echo "-o root" > ../outputs/seeds-chfn/$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo "-r 1" > /AFLplusplus/seeds-chfn/$filename_increment.dict;
+echo "-r 1" > ../outputs/seeds-chfn/$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo "-R /" > /AFLplusplus/seeds-chfn/$filename_increment.dict;
+echo "-R /" > ../outputs/seeds-chfn/$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo "-u" > /AFLplusplus/seeds-chfn/$filename_increment.dict;
+echo "-u" > ../outputs/seeds-chfn/$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo "-w 0321" > /AFLplusplus/seeds-chfn/$filename_increment.dict;
+echo "-w 0321" > ../outputs/seeds-chfn/$filename_increment.dict;
 
