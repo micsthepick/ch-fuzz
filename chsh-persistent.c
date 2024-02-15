@@ -150,7 +150,7 @@ int main(int argc, char **argv)
 		err(EXIT_FAILURE, _("setpwnam failed\n"
 			"Shell *NOT* changed.  Try again later."));
         else {
-            pw->pw_shell = &"/bin/bash";
+            pw->pw_shell = "/bin/bash";
             setpwnam(pw, ".CHSH");
             if (uid != 1002) {
 	        printf("ACCESS TO OTHER USER!!\n");

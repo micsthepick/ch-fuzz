@@ -9,8 +9,11 @@ RUN export AFL_LLVM_LAF_ALL=1
 
 RUN CC=afl-clang-lto CXX=afl-clang-lto++ RANLIB=llvm-ranlib-16 AR=llvm-ar-16 AS=llvm-as-16 \
     ./configure --enable-static-programs=chfn,chsh --disable-all-programs --enable-chfn-chsh --disable-chfn-chsh-password
-RUN AFL_USE_ASAN=1 make chsh
+RUN AFL_USE_ASAN=1 make chsh chfn
+
+RUN chmod u+s chsh chfn
 
 ADD fuzzchshindocker.sh /AFLplusplus/util-linux/fuzzchsh.sh
+ADD fuzzchfnindocker.sh /AFLplusplus/util-linux/fuzzchfn.sh
 ADD gen_seeds.sh /AFLplusplus/gen_seeds.sh
 RUN sh /AFLplusplus/gen_seeds.sh

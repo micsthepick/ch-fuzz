@@ -1,2 +1,2 @@
 #!/bin/bash
-afl-fuzz -i ../seeds -o output -- ./chsh
+afl-fuzz -i ../seeds-chsh -o output-chsh -- ./chsh
