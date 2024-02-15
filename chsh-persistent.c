@@ -44,6 +44,8 @@ static void parse_argv_cust(int argc, char **argv, struct sinfo *pinfo)
 }
 */
 
+#include "../../utils/argv_fuzzing/argv-fuzz-inl.h"
+
 int main(int argc, char **argv)
 {
 	char *oldshell, *pwbuf;
@@ -51,6 +53,8 @@ int main(int argc, char **argv)
 	const uid_t uid = 1002;
 	struct sinfo info = { NULL };
 	struct passwd *pw;
+
+        AFL_INIT_ARGV();
 
 	sanitize_env();
 	setlocale(LC_ALL, "");

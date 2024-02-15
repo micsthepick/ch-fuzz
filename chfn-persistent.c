@@ -56,6 +56,8 @@
 # include "auth.h"
 #endif
 
+#include "../../utils/argv_fuzzing/argv-fuzz-inl.h"
+
 struct finfo {
 	char *full_name;
 	char *office;
@@ -399,6 +401,8 @@ int main(int argc, char **argv)
 	struct chfn_control ctl = {
 		.interactive = 1
 	};
+
+        AFL_INIT_ARGV();
 
 	sanitize_env();
 	setlocale(LC_ALL, "");	/* both for messages and for iscntrl() below */
