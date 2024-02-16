@@ -2,7 +2,7 @@ FROM aflplusplus/aflplusplus:dev as fuzzchsh
 
 RUN apt-get update && \
     apt-get -y install --no-install-recommends \
-    gettext autopoint
+    gettext autopoint tmux parallel
 
 RUN git clone https://github.com/util-linux/util-linux.git
 WORKDIR /AFLplusplus/util-linux
@@ -78,5 +78,5 @@ RUN useradd -s /bin/bash -u 1002 gues
 
 ADD runarg.sh /AFLplusplus/util-linux/runarg.sh
 ADD cmin.sh /AFLplusplus/util-linux/cmin.sh
-
-
+ADD run12tmux.sh /AFLplusplus/util-linux/run12tmux.sh
+ADD tmin.sh /

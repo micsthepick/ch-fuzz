@@ -1,30 +1,31 @@
-mkdir -p ../outputs/seeds-chsh
+export filepath="../outputs/seeds-chsh/"
+mkdir -p $filepath
 filename_increment=0
 
-echo "-s a" > ../outputs/seeds-chsh/$filename_increment.dict;
+
+[[ -f $filepath$filename_increment.dict ]] || echo "-s a" > $filepath$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo "-s /bin/bash" > ../outputs/seeds-chsh/$filename_increment.dict;
+[[ -f $filepath$filename_increment.dict ]] || echo "-s /bin/bash" > $filepath$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo '-s "/bin/bash" gues' > ../outputs/seeds-chsh/$filename_increment.dict;
+[[ -f $filepath$filename_increment.dict ]] || echo "-s /bin/dash" > $filepath$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo "admn" > ../outputs/seeds-chsh/$filename_increment.dict;
-filename_increment=$((filename_increment + 1));
-echo "sshd" > ../outputs/seeds-chsh/$filename_increment.dict;
+[[ -f $filepath$filename_increment.dict ]] || echo "admn" > $filepath$filename_increment.dict;
 
 mkdir -p ../outputs/seeds-chfn
+export filepath="../outputs/seeds-chfn/"
 filename_increment=0
 
-echo "-f a" > ../outputs/seeds-chfn/$filename_increment.dict;
+[[ -f $filepath$filename_increment.dict ]] || echo "-f a" > $filepath$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo "-h 0123" > ../outputs/seeds-chfn/$filename_increment.dict;
+[[ -f $filepath$filename_increment.dict ]] || echo "-h 0123" > $filepath$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo "-o root" > ../outputs/seeds-chfn/$filename_increment.dict;
+[[ -f $filepath$filename_increment.dict ]] || echo "-o root" > $filepath$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo "-r 1" > ../outputs/seeds-chfn/$filename_increment.dict;
+[[ -f $filepath$filename_increment.dict ]] || echo "-r 1" > $filepath$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo "-R /" > ../outputs/seeds-chfn/$filename_increment.dict;
+[[ -f $filepath$filename_increment.dict ]] || echo "-R /" > $filepath$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo "-u" > ../outputs/seeds-chfn/$filename_increment.dict;
+[[ -f $filepath$filename_increment.dict ]] || echo "-u" > $filepath$filename_increment.dict;
 filename_increment=$((filename_increment + 1));
-echo "-w 0321" > ../outputs/seeds-chfn/$filename_increment.dict;
+[[ -f $filepath$filename_increment.dict ]] || echo "-w 0321" > $filepath$filename_increment.dict;
 
